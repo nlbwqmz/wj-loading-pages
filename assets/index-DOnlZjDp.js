@@ -1,10 +1,10 @@
-var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i,t)=>(I(e,i,"read from private field"),t?t.call(e):i.get(e)),n=(e,i,t)=>i.has(e)?B("Cannot add the same private member more than once"):i instanceof WeakSet?i.add(e):i.set(e,t),l=(e,i,t,d)=>(I(e,i,"write to private field"),d?d.call(e,t):i.set(e,t),t),o=(e,i,t)=>(I(e,i,"access private method"),t);(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))d(a);new MutationObserver(a=>{for(const r of a)if(r.type==="childList")for(const p of r.addedNodes)p.tagName==="LINK"&&p.rel==="modulepreload"&&d(p)}).observe(document,{childList:!0,subtree:!0});function t(a){const r={};return a.integrity&&(r.integrity=a.integrity),a.referrerPolicy&&(r.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?r.credentials="include":a.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function d(a){if(a.ep)return;a.ep=!0;const r=t(a);fetch(a.href,r)}})();const $t=(e=8)=>{const i="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";let t="";for(let d=0;d<e;d++)t+=i.charAt(Math.floor(Math.random()*i.length));return t};var m,W,V,Y,P;let c=(P=class{constructor(i){n(this,m);this.id=`wj-loading-${$t()}`,console.log(this.id),this.rendered=!1,this.element=o(this,m,Y).call(this,i.element),this.immediate=i.immediate,this.interval=i.interval,this.afterRemove=i.afterRemove,this.background=i.background||"none",this.zIndex=this.zIndex||2e3,this.style=document.createElement("style"),this.container=document.createElement("div"),o(this,m,W).call(this),o(this,m,V).call(this)}setContainerFlexCenter(){this.style.innerHTML+=`
+var K=s=>{throw TypeError(s)};var J=(s,i,t)=>i.has(s)||K("Cannot "+t);var e=(s,i,t)=>(J(s,i,"read from private field"),t?t.call(s):i.get(s)),r=(s,i,t)=>i.has(s)?K("Cannot add the same private member more than once"):i instanceof WeakSet?i.add(s):i.set(s,t),d=(s,i,t,l)=>(J(s,i,"write to private field"),l?l.call(s,t):i.set(s,t),t),n=(s,i,t)=>(J(s,i,"access private method"),t);(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))l(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const g of a.addedNodes)g.tagName==="LINK"&&g.rel==="modulepreload"&&l(g)}).observe(document,{childList:!0,subtree:!0});function t(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerPolicy&&(a.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?a.credentials="include":o.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function l(o){if(o.ep)return;o.ep=!0;const a=t(o);fetch(o.href,a)}})();const zt=(s=8)=>{const i="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";let t="";for(let l=0;l<s;l++)t+=i.charAt(Math.floor(Math.random()*i.length));return t};var m,X,Z,tt,U;let h=(U=class{constructor(i){r(this,m);this.id=`wj-loading-${zt()}`,console.log(this.id),this.rendered=!1,this.element=n(this,m,tt).call(this,i.element),this.immediate=i.immediate,this.interval=i.interval,this.afterRemove=i.afterRemove,this.background=i.background||"none",this.zIndex=this.zIndex||2e3,this.style=document.createElement("style"),this.container=document.createElement("div"),n(this,m,X).call(this),n(this,m,Z).call(this)}setContainerFlexCenter(){this.style.innerHTML+=`
       .${this.id}-container {
         display: flex;
         justify-content: center;
         align-items: center;
       }
-    `}addStyle(i){this.style.appendChild(i)}addElement(i){typeof i=="string"?this.container.innerHTML+=i:this.container.appendChild(i)}finish(){this.immediate&&this.loading()}loading(){this.rendered||(["relative","absolute","fixed"].includes(this.element.style.position)||this.element.classList.add(`${this.id}-relative`),this.element.classList.add(`${this.id}-lock`),document.getElementsByTagName("head")[0].appendChild(this.style),this.element.appendChild(this.container),this.rendered=!0,this.afterRendered&&this.afterRendered(),this.interval&&this.interval>0&&setTimeout(()=>{this.remove()},this.interval))}remove(){this.rendered&&(this.container&&this.container.remove(),this.style&&this.style.remove(),this.element.classList.contains(`${this.id}-relative`)&&this.element.classList.remove(`${this.id}-relative`),this.element.classList.remove(`${this.id}-lock`),this.rendered=!1,this.afterRemove&&this.afterRemove())}},m=new WeakSet,W=function(){const i=this.element===document.body?window.innerHeight:this.element.offsetHeight;this.style.innerHTML=`
+    `}addStyle(i){this.style.appendChild(i)}addElement(i){typeof i=="string"?this.container.innerHTML+=i:this.container.appendChild(i)}finish(){this.immediate&&this.loading()}loading(){this.rendered||(["relative","absolute","fixed"].includes(this.element.style.position)||this.element.classList.add(`${this.id}-relative`),this.element.classList.add(`${this.id}-lock`),document.getElementsByTagName("head")[0].appendChild(this.style),this.element.appendChild(this.container),this.rendered=!0,this.afterRendered&&this.afterRendered(),this.interval&&this.interval>0&&setTimeout(()=>{this.remove()},this.interval))}remove(){this.rendered&&(this.container&&this.container.remove(),this.style&&this.style.remove(),this.element.classList.contains(`${this.id}-relative`)&&this.element.classList.remove(`${this.id}-relative`),this.element.classList.remove(`${this.id}-lock`),this.rendered=!1,this.afterRemove&&this.afterRemove())}},m=new WeakSet,X=function(){const i=this.element===document.body?window.innerHeight:this.element.offsetHeight;this.style.innerHTML=`
       .${this.id}-relative {
         position: relative;
       }
@@ -22,22 +22,22 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
         left: ${this.element.scrollLeft}px;
         top: ${this.element.scrollTop}px;
       }
-    `},V=function(){this.container.classList.add(`${this.id}-container`)},Y=function(i){if(i)if(typeof i=="string"){const t=document.querySelector(i);if(!t)throw new Error(`未找到当前节点：${i}`);return t}else return i;else return document.body},P);var $,A,v,b,f,G,J,K;class bt extends c{constructor(t){super(t);n(this,f);n(this,$);n(this,A);n(this,v);n(this,b);l(this,A,t.text||"Loading..."),l(this,v,t.fontColor||"rgba(128, 128, 128, .9)"),l(this,b,t.textVisible||3),l(this,$,t.maxSize),this.addStyle(o(this,f,J).call(this)),this.addElement(o(this,f,K).call(this)),this.afterRendered=()=>{s(this,b)===3&&o(this,f,G).call(this)},this.finish()}}$=new WeakMap,A=new WeakMap,v=new WeakMap,b=new WeakMap,f=new WeakSet,G=function(){const t=this.element.querySelector(`.${this.id}-text`);t&&(t.offsetWidth<t.scrollWidth?t.style.display="none":t.style.display="block")},J=function(){const t=this.element===document.body?window.innerWidth:this.element.offsetWidth,d=this.element===document.body?window.innerHeight:this.element.offsetHeight;let a=Math.min(t,d)/4;s(this,$)&&a>s(this,$)&&(a=s(this,$));const r=a/2,p=document.createElement("style");return p.innerHTML=`
+    `},Z=function(){this.container.classList.add(`${this.id}-container`)},tt=function(i){if(i)if(typeof i=="string"){const t=document.querySelector(i);if(!t)throw new Error(`未找到当前节点：${i}`);return t}else return i;else return document.body},U);var $,O,v,b,f,it,et,st;class Ft extends h{constructor(t){super(t);r(this,f);r(this,$);r(this,O);r(this,v);r(this,b);d(this,O,t.text||"Loading..."),d(this,v,t.fontColor||"rgba(128, 128, 128, .9)"),d(this,b,t.textVisible||3),d(this,$,t.maxSize),this.addStyle(n(this,f,et).call(this)),this.addElement(n(this,f,st).call(this)),this.afterRendered=()=>{e(this,b)===3&&n(this,f,it).call(this)},this.finish()}}$=new WeakMap,O=new WeakMap,v=new WeakMap,b=new WeakMap,f=new WeakSet,it=function(){const t=this.element.querySelector(`.${this.id}-text`);t&&(t.offsetWidth<t.scrollWidth?t.style.display="none":t.style.display="block")},et=function(){const t=this.element===document.body?window.innerWidth:this.element.offsetWidth,l=this.element===document.body?window.innerHeight:this.element.offsetHeight;let o=Math.min(t,l)/4;e(this,$)&&o>e(this,$)&&(o=e(this,$));const a=o/2,g=document.createElement("style");return g.innerHTML=`
         .${this.id}-text {
           width: 100%;
           position: absolute;
           text-align: center;
           overflow: hidden;
           white-space: nowrap;
-          ${s(this,v)?`color: ${s(this,v)};`:""}
-          top: ${d/2+r+10}px;
-          ${s(this,b)===1||s(this,b)===3?"":"display: none;"}
+          ${e(this,v)?`color: ${e(this,v)};`:""}
+          top: ${l/2+a+10}px;
+          ${e(this,b)===1||e(this,b)===3?"":"display: none;"}
         }
         
         .${this.id} {
           position: absolute;
-          width: ${a}px;
-          height: ${a}px;
+          width: ${o}px;
+          height: ${o}px;
           top: 0;
           bottom: 0;
           left: 0;
@@ -46,8 +46,8 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
         }
         
         .${this.id} .${this.id}-item {
-          width: ${r}px;
-          height: ${r}px;
+          width: ${a}px;
+          height: ${a}px;
           position: absolute;
         }
         
@@ -83,48 +83,48 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
         
         @keyframes ${this.id}-item-1_move {
           0%, 100% {transform: translate(0, 0)} 
-          25% {transform: translate(0, ${r}px)} 
-          50% {transform: translate(${r}px, ${r}px)} 
-          75% {transform: translate(${r}px, 0)} 
+          25% {transform: translate(0, ${a}px)} 
+          50% {transform: translate(${a}px, ${a}px)} 
+          75% {transform: translate(${a}px, 0)} 
         }
         
         @keyframes ${this.id}-item-2_move {
           0%, 100% {transform: translate(0, 0)}
-          25% {transform: translate(-${r}px, 0)}
-          50% {transform: translate(-${r}px, ${r}px)}
-          75% {transform: translate(0, ${r}px)} 
+          25% {transform: translate(-${a}px, 0)}
+          50% {transform: translate(-${a}px, ${a}px)}
+          75% {transform: translate(0, ${a}px)} 
         }
         
         @keyframes ${this.id}-item-3_move {
           0%, 100% {transform: translate(0, 0)} 
-          25% {transform: translate(0, -${r}px)} 
-          50% {transform: translate(-${r}px, -${r}px)} 
-          75% {transform: translate(-${r}px, 0)} 
+          25% {transform: translate(0, -${a}px)} 
+          50% {transform: translate(-${a}px, -${a}px)} 
+          75% {transform: translate(-${a}px, 0)} 
         }
         
         @keyframes ${this.id}-item-4_move {
           0%, 100% {transform: translate(0, 0)} 
-          25% {transform: translate(${r}px, 0)} 
-          50% {transform: translate(${r}px, -${r}px)} 
-          75% {transform: translate(0, -${r}px)} 
+          25% {transform: translate(${a}px, 0)} 
+          50% {transform: translate(${a}px, -${a}px)} 
+          75% {transform: translate(0, -${a}px)} 
         }
-        `,p},K=function(){return`
+        `,g},st=function(){return`
         <div class="${this.id}">
               <div class="${this.id}-item ${this.id}-item-1"></div>
               <div class="${this.id}-item ${this.id}-item-2"></div>
               <div class="${this.id}-item ${this.id}-item-3"></div>
               <div class="${this.id}-item ${this.id}-item-4"></div>
             </div>
-            <div class="${this.id}-text">${s(this,A)}</div>
-        `};var O,y,S,Q,U;class ut extends c{constructor(t){super(t);n(this,S);n(this,O);n(this,y);l(this,O,t.color||"#333"),l(this,y,t.size||"20px"),this.setContainerFlexCenter(),this.addStyle(o(this,S,Q).call(this)),this.addElement(o(this,S,U).call(this)),this.finish()}}O=new WeakMap,y=new WeakMap,S=new WeakSet,Q=function(){const t=document.createElement("style");return t.innerHTML=`
+            <div class="${this.id}-text">${e(this,O)}</div>
+        `};var D,y,S,rt,at;class Tt extends h{constructor(t){super(t);r(this,S);r(this,D);r(this,y);d(this,D,t.color||"#333"),d(this,y,t.size||"20px"),this.setContainerFlexCenter(),this.addStyle(n(this,S,rt).call(this)),this.addElement(n(this,S,at).call(this)),this.finish()}}D=new WeakMap,y=new WeakMap,S=new WeakSet,rt=function(){const t=document.createElement("style");return t.innerHTML=`
       .${this.id}-bounce {
        text-align: center;
       }
       
       .${this.id}-bounce>div {
-       width: ${s(this,y)};
-       height: ${s(this,y)};
-       background-color: ${s(this,O)};
+       width: ${e(this,y)};
+       height: ${e(this,y)};
+       background-color: ${e(this,D)};
        border-radius: 100%;
        display: inline-block;
        animation: ${this.id}-sk-bouncedelay 1.4s infinite ease-in-out both;
@@ -148,21 +148,21 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
         transform: scale(1.0);
        }
       }
-        `,t},U=function(){return`
+        `,t},at=function(){return`
         <div class="${this.id}-bounce">
           <div class="${this.id}-bounce1"></div>
           <div class="${this.id}-bounce2"></div>
           <div class="${this.id}-bounce3"></div>
         </div>
-        `};var u,k,z,X,Z;class gt extends c{constructor(t){super(t);n(this,z);n(this,u);n(this,k);l(this,u,t.color&&t.color.length>=3?t.color:["#FF5722","#FF9800","#FFC107"]),l(this,k,t.size||"100px"),this.setContainerFlexCenter(),this.addStyle(o(this,z,X).call(this)),this.addElement(o(this,z,Z).call(this)),this.finish()}}u=new WeakMap,k=new WeakMap,z=new WeakSet,X=function(){const t=document.createElement("style");return t.innerHTML=`
+        `};var p,k,z,nt,ot;class Mt extends h{constructor(t){super(t);r(this,z);r(this,p);r(this,k);d(this,p,t.color&&t.color.length>=3?t.color:["#FF5722","#FF9800","#FFC107"]),d(this,k,t.size||"100px"),this.setContainerFlexCenter(),this.addStyle(n(this,z,nt).call(this)),this.addElement(n(this,z,ot).call(this)),this.finish()}}p=new WeakMap,k=new WeakMap,z=new WeakSet,nt=function(){const t=document.createElement("style");return t.innerHTML=`
       .${this.id} {
         display: block;
         position: relative;
-        width: ${s(this,k)};
-        height: ${s(this,k)};
+        width: ${e(this,k)};
+        height: ${e(this,k)};
         border-radius: 50%;
         border: 4px solid transparent;
-        border-top: 4px solid ${s(this,u)[0]};
+        border-top: 4px solid ${e(this,p)[0]};
         -webkit-animation: ${this.id}-spin 2s linear infinite;
         animation: ${this.id}-spin 2s linear infinite;
       }
@@ -179,7 +179,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
         left: 5px;
         right: 5px;
         bottom: 5px;
-        border-top-color: ${s(this,u)[1]};
+        border-top-color: ${e(this,p)[1]};
         -webkit-animation: ${this.id}-spin 3s linear infinite;
         animation: ${this.id}-spin 3.5s linear infinite;
       }
@@ -188,7 +188,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
         left: 15px;
         right: 15px;
         bottom: 15px;
-        border-top-color: ${s(this,u)[2]};
+        border-top-color: ${e(this,p)[2]};
         -webkit-animation: ${this.id}-spin 1.5s linear infinite;
         animation: ${this.id}-spin 1.75s linear infinite;
       }
@@ -226,15 +226,15 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
           transform: rotate(360deg);
         }
       }
-        `,t},Z=function(){return`
+        `,t},ot=function(){return`
         <div class="${this.id}"></div>
-        `};var g,x,F,tt,it;class pt extends c{constructor(t){super(t);n(this,F);n(this,g);n(this,x);l(this,g,t.color&&t.color.length>=3?t.color:["#F15E41","#BAD375","#26A9E0"]),l(this,x,t.size||"100px"),this.setContainerFlexCenter(),this.addStyle(o(this,F,tt).call(this)),this.addElement(o(this,F,it).call(this)),this.finish()}}g=new WeakMap,x=new WeakMap,F=new WeakSet,tt=function(){const t=document.createElement("style");return t.innerHTML=`
+        `};var u,x,F,dt,lt;class Ht extends h{constructor(t){super(t);r(this,F);r(this,u);r(this,x);d(this,u,t.color&&t.color.length>=3?t.color:["#F15E41","#BAD375","#26A9E0"]),d(this,x,t.size||"100px"),this.setContainerFlexCenter(),this.addStyle(n(this,F,dt).call(this)),this.addElement(n(this,F,lt).call(this)),this.finish()}}u=new WeakMap,x=new WeakMap,F=new WeakSet,dt=function(){const t=document.createElement("style");return t.innerHTML=`
           .${this.id} {
-            height: ${s(this,x)};
-            width: ${s(this,x)};
+            height: ${e(this,x)};
+            width: ${e(this,x)};
             border: 3px solid transparent;
             border-radius: 50%;
-            border-top: 4px solid ${s(this,g)[0]};
+            border-top: 4px solid ${e(this,u)[0]};
             -webkit-animation: ${this.id}-spin 4s linear infinite;
             animation: ${this.id}-spin 4s linear infinite;
             position: relative;
@@ -253,13 +253,13 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
           }
           
           .${this.id}::before {
-            border-top-color: ${s(this,g)[1]};
+            border-top-color: ${e(this,u)[1]};
             -webkit-animation: 3s ${this.id}-spin linear infinite;
             animation: 3s ${this.id}-spin linear infinite;
           }
           
           .${this.id}::after {
-            border-top-color: ${s(this,g)[2]};
+            border-top-color: ${e(this,u)[2]};
             -webkit-animation: ${this.id}-spin 1.5s linear infinite;
             animation: ${this.id}-spin 1.5s linear infinite;
           }
@@ -333,9 +333,9 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
               transform: rotate(360deg);
             }
           }
-        `,t},it=function(){return`
+        `,t},lt=function(){return`
         <div class="${this.id}"></div>
-        `};var R,T,et,st;class vt extends c{constructor(t){super(t);n(this,T);n(this,R);l(this,R,t.color||"#F44336"),this.setContainerFlexCenter(),this.addStyle(o(this,T,et).call(this)),this.addElement(o(this,T,st).call(this)),this.finish()}}R=new WeakMap,T=new WeakSet,et=function(){const t=document.createElement("style");return t.innerHTML=`
+        `};var R,T,ht,ct;class At extends h{constructor(t){super(t);r(this,T);r(this,R);d(this,R,t.color||"#F44336"),this.setContainerFlexCenter(),this.addStyle(n(this,T,ht).call(this)),this.addElement(n(this,T,ct).call(this)),this.finish()}}R=new WeakMap,T=new WeakSet,ht=function(){const t=document.createElement("style");return t.innerHTML=`
           .${this.id} {
             overflow: hidden;
             height: inherit;
@@ -345,7 +345,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
             width: 30px;
             height: 30px;
             position: absolute;
-            background: ${s(this,R)};
+            background: ${e(this,R)};
             border-radius: 50%;
             margin: -15px;
             -webkit-animation: ${this.id}-mesh 3s ease-in-out infinite -1.5s;
@@ -422,7 +422,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
               transform: rotate(360deg);
             }
           }
-        `,t},st=function(){return`
+        `,t},ct=function(){return`
         <div class="${this.id}">
           <div class="${this.id}-set-one">
             <div class="${this.id}-circle"></div>
@@ -433,7 +433,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
             <div class="${this.id}-circle"></div>
           </div>
         </div>
-        `};var _,M,rt,nt;class yt extends c{constructor(t){super(t);n(this,M);n(this,_);l(this,_,t.color||"#F44336"),this.setContainerFlexCenter(),this.addStyle(o(this,M,rt).call(this)),this.addElement(o(this,M,nt).call(this)),this.finish()}}_=new WeakMap,M=new WeakSet,rt=function(){const t=document.createElement("style");return t.innerHTML=`
+        `};var Y,M,mt,ft;class Wt extends h{constructor(t){super(t);r(this,M);r(this,Y);d(this,Y,t.color||"#F44336"),this.setContainerFlexCenter(),this.addStyle(n(this,M,mt).call(this)),this.addElement(n(this,M,ft).call(this)),this.finish()}}Y=new WeakMap,M=new WeakSet,mt=function(){const t=document.createElement("style");return t.innerHTML=`
           .${this.id} {
             position: relative;
             width: auto;
@@ -443,7 +443,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
           .${this.id} div {
             height: 10px;
             width: 10px;
-            background-color: ${s(this,_)};
+            background-color: ${e(this,Y)};
             border-radius: 50%;
             position: absolute;
             -webkit-animation: 0.8s ${this.id}-opaque ease-in-out infinite both;
@@ -510,7 +510,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
               opacity: 0.1;
             }
           }
-        `,t},nt=function(){return`
+        `,t},ft=function(){return`
         <div class="${this.id}">
           <div></div>
           <div></div>
@@ -521,16 +521,16 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
           <div></div>
           <div></div>
         </div>
-        `};var D,w,H,at,ot;class kt extends c{constructor(t){super(t);n(this,H);n(this,D);n(this,w);l(this,D,t.color||"#333"),l(this,w,t.size||"20px"),this.setContainerFlexCenter(),this.addStyle(o(this,H,at).call(this)),this.addElement(o(this,H,ot).call(this)),this.finish()}}D=new WeakMap,w=new WeakMap,H=new WeakSet,at=function(){const t=document.createElement("style");return t.innerHTML=`
+        `};var _,w,H,$t,bt;class qt extends h{constructor(t){super(t);r(this,H);r(this,_);r(this,w);d(this,_,t.color||"#333"),d(this,w,t.size||"20px"),this.setContainerFlexCenter(),this.addStyle(n(this,H,$t).call(this)),this.addElement(n(this,H,bt).call(this)),this.finish()}}_=new WeakMap,w=new WeakMap,H=new WeakSet,$t=function(){const t=document.createElement("style");return t.innerHTML=`
           .${this.id} {
            display: grid;
            grid-template-columns: repeat(3, 1fr);
           }
           
           .${this.id}-sk-cube {
-           width: ${s(this,w)};
-           height: ${s(this,w)};
-           background-color: ${s(this,D)};
+           width: ${e(this,w)};
+           height: ${e(this,w)};
+           background-color: ${e(this,_)};
            animation: ${this.id}-sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
           }
           
@@ -580,7 +580,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
             transform: scale3D(0, 0, 1);
            }
           }
-        `,t},ot=function(){return`
+        `,t},bt=function(){return`
          <div class="${this.id}">
           <div class="${this.id}-sk-cube ${this.id}-sk-cube1"></div>
           <div class="${this.id}-sk-cube ${this.id}-sk-cube2"></div>
@@ -592,17 +592,17 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
           <div class="${this.id}-sk-cube ${this.id}-sk-cube8"></div>
           <div class="${this.id}-sk-cube ${this.id}-sk-cube9"></div>
          </div>
-        `};var L,E,h,q,dt,lt;class xt extends c{constructor(t){super(t);n(this,q);n(this,L);n(this,E);n(this,h);l(this,L,t.color||"#333"),l(this,E,t.size||"16px"),l(this,h,t.text||"Loading..."),console.log(s(this,h).length),this.setContainerFlexCenter(),this.addStyle(o(this,q,dt).call(this)),this.addElement(o(this,q,lt).call(this)),this.finish()}}L=new WeakMap,E=new WeakMap,h=new WeakMap,q=new WeakSet,dt=function(){let t=.48;const d=document.createElement("style");d.innerHTML=`
+        `};var L,E,c,A,pt,ut;class jt extends h{constructor(t){super(t);r(this,A);r(this,L);r(this,E);r(this,c);d(this,L,t.color||"#333"),d(this,E,t.size||"16px"),d(this,c,t.text||"Loading..."),console.log(e(this,c).length),this.setContainerFlexCenter(),this.addStyle(n(this,A,pt).call(this)),this.addElement(n(this,A,ut).call(this)),this.finish()}}L=new WeakMap,E=new WeakMap,c=new WeakMap,A=new WeakSet,pt=function(){let t=.48;const l=document.createElement("style");l.innerHTML=`
           .${this.id} {
             display: flex;
           }
           .${this.id} div {
             animation-name: ${this.id}-loading;
-            animation-duration: ${t+.05*(s(this,h).length-1)}s;
+            animation-duration: ${t+.05*(e(this,c).length-1)}s;
             animation-iteration-count: infinite;
             animation-direction: linear;
-            ${s(this,E)?`font-size: ${s(this,E)};`:""}
-            ${s(this,L)?`color: ${s(this,L)};`:""}
+            ${e(this,E)?`font-size: ${e(this,E)};`:""}
+            ${e(this,L)?`color: ${e(this,L)};`:""}
           }
           @keyframes ${this.id}-loading {
             0% {
@@ -617,15 +617,15 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
               transform: translateY(0);
             }
           }
-        `;for(let a=0;a<s(this,h).length;a++)d.innerHTML+=`
-            .${this.id}-item-${a} {
-              animation-delay: ${t+.05*a}s;
+        `;for(let o=0;o<e(this,c).length;o++)l.innerHTML+=`
+            .${this.id}-item-${o} {
+              animation-delay: ${t+.05*o}s;
             }
-      `;return d},lt=function(){const t=document.createElement("div");t.classList.add(this.id);for(let d=0;d<s(this,h).length;d++)t.innerHTML+=`<div class="${this.id}-item-${d}">${s(this,h).charAt(d)}</div>`;return t};var C,j,ht,ct;class wt extends c{constructor(t){super(t);n(this,j);n(this,C);l(this,C,t.color&&t.color.length>=2?t.color:["#000","#000"]),this.setContainerFlexCenter(),this.addStyle(o(this,j,ht).call(this)),this.addElement(o(this,j,ct).call(this)),this.finish()}}C=new WeakMap,j=new WeakSet,ht=function(){const t=document.createElement("style");return t.innerHTML=`
+      `;return l},ut=function(){const t=document.createElement("div");t.classList.add(this.id);for(let l=0;l<e(this,c).length;l++)t.innerHTML+=`<div class="${this.id}-item-${l}">${e(this,c).charAt(l)}</div>`;return t};var C,W,gt,vt;class Bt extends h{constructor(t){super(t);r(this,W);r(this,C);d(this,C,t.color&&t.color.length>=2?t.color:["#000","#000"]),this.setContainerFlexCenter(),this.addStyle(n(this,W,gt).call(this)),this.addElement(n(this,W,vt).call(this)),this.finish()}}C=new WeakMap,W=new WeakSet,gt=function(){const t=document.createElement("style");return t.innerHTML=`
 .${this.id} {
   display: block;
   font-size: 0;
-  color: ${s(this,C)[0]};
+  color: ${e(this,C)[0]};
 }
 .${this.id},
 .${this.id} > div {
@@ -659,7 +659,7 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
   width: 14px;
   height: 2px;
   border-radius: 0;
-  background-color: ${s(this,C)[1]};
+  background-color: ${e(this,C)[1]};
   transform: translate(60%, 0);
   animation: ${this.id}-ball-climbing-dot-steps 1.8s linear infinite;
 }
@@ -713,26 +713,178 @@ var B=e=>{throw TypeError(e)};var I=(e,i,t)=>i.has(e)||B("Cannot "+t);var s=(e,i
     opacity: 0;
   }
 }
-        `,t},ct=function(){return`<div class="${this.id}"><div></div><div></div><div></div><div></div></div>`};const mt={SquareLoading:bt,CmSpinnerLoading:pt,TripleSpinnerLoading:gt,MeshLoaderLoading:vt,BounceLoading:ut,CircleLoaderLoading:yt,CubesLoading:kt,TextLoading:xt,DotJumpLoading:wt},ft=Object.keys(mt),Lt=()=>{let e="";return ft.forEach(i=>{e+=`
+        `,t},vt=function(){return`<div class="${this.id}"><div></div><div></div><div></div><div></div></div>`};var I,N,P,q,yt,kt;class Ot extends h{constructor(t){super(t);r(this,q);r(this,I);r(this,N);r(this,P);d(this,I,t.color||"#fff"),d(this,N,t.shadowColor||"#000"),d(this,P,t.shadowOpacity||.1),this.setContainerFlexCenter(),this.addStyle(n(this,q,yt).call(this)),this.addElement(n(this,q,kt).call(this)),this.finish()}}I=new WeakMap,N=new WeakMap,P=new WeakMap,q=new WeakSet,yt=function(){const t=document.createElement("style");return t.innerHTML=`
+.${this.id} {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+.${this.id}-box {
+  width: 50px;
+  height: 50px;
+  background: ${e(this,I)};
+  animation: ${this.id}-animate .5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
+@keyframes ${this.id}-animate {
+  17% { border-bottom-right-radius: 3px; }
+  25% { transform: translateY(9px) rotate(22.5deg); }
+  50% {
+    transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+    border-bottom-right-radius: 40px;
+  }
+  75% { transform: translateY(9px) rotate(67.5deg); }
+  100% { transform: translateY(0) rotate(90deg); }
+} 
+.${this.id}-shadow { 
+  width: 50px;
+  height: 5px;
+  background: ${e(this,N)};
+  opacity: ${e(this,P)};
+  position: absolute;
+  top: 59px;
+  left: 0;
+  border-radius: 50%;
+  animation: ${this.id}-shadow .5s linear infinite;
+}
+@keyframes ${this.id}-shadow {
+  50% {
+    transform: scale(1.2,1);
+  }
+}
+        `,t},kt=function(){return`
+        <div class="${this.id}">
+          <div class="${this.id}-shadow"></div>
+          <div class="${this.id}-box"></div>
+        </div>
+        `};var V,j,xt,wt;class Dt extends h{constructor(t){super(t);r(this,j);r(this,V);d(this,V,t.color||"#000"),this.setContainerFlexCenter(),this.addStyle(n(this,j,xt).call(this)),this.addElement(n(this,j,wt).call(this)),this.finish()}}V=new WeakMap,j=new WeakSet,xt=function(){const t=document.createElement("style");return t.innerHTML=`
+.${this.id} {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin: -25px 0 0 -25px;
+  border-radius: 50%;
+}
+
+.${this.id}:before, .${this.id}:after {
+  content: '';
+  border: 2px solid ${e(this,V)};
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+}
+
+.${this.id}:before {
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+  opacity: 1;
+  -webkit-animation: ${this.id}-spWaveBe 0.6s infinite linear;
+          animation: ${this.id}-spWaveBe 0.6s infinite linear;
+}
+
+.${this.id}:after {
+  -webkit-transform: scale(0, 0);
+      -ms-transform: scale(0, 0);
+          transform: scale(0, 0);
+  opacity: 0;
+  -webkit-animation: ${this.id}-spWaveAf 0.6s infinite linear;
+          animation: ${this.id}-spWaveAf 0.6s infinite linear;
+}
+
+@-webkit-keyframes ${this.id}-spWaveAf {
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes ${this.id}-spWaveAf {
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ${this.id}-spWaveBe {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+}
+@keyframes ${this.id}-spWaveBe {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+}
+        `,t},wt=function(){return`<div class="${this.id}"></div>`};var G,B,Lt,Et;class Rt extends h{constructor(t){super(t);r(this,B);r(this,G);d(this,G,t.color||"#000"),this.setContainerFlexCenter(),this.addStyle(n(this,B,Lt).call(this)),this.addElement(n(this,B,Et).call(this)),this.finish()}}G=new WeakMap,B=new WeakSet,Lt=function(){const t=document.createElement("style");return t.innerHTML=`
+.${this.id} {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: ${e(this,G)};
+
+  animation: ${this.id}-ball-scale infinite linear 0.75s;
+}
+
+@keyframes ${this.id}-ball-scale {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+        `,t},Et=function(){return`<div class="${this.id}"></div>`};const Ct={SquareLoading:Ft,CmSpinnerLoading:Ht,TripleSpinnerLoading:Mt,MeshLoaderLoading:At,BounceLoading:Tt,CircleLoaderLoading:Wt,CubesLoading:qt,TextLoading:jt,DotJumpLoading:Bt,JellyLoading:Ot,WaveLoading:Dt,DotExpandLoading:Rt},St=Object.keys(Ct),Yt=()=>{let s="";return St.forEach(i=>{s+=`
       <div class="card">
         <div class="card-header">${i}</div>
         <div class="card-body" id="${i}-loading"></div>
       </div>
-    `}),e};document.querySelector("#app").innerHTML=`
+    `}),s};document.querySelector("#app").innerHTML=`
   <div class="title">wj-loading</div>
   <div class="desc">
-    <div>
-      <div>
-        <span>安装：</span>
-        <span>yarn add wj-loading | npm install wj-loading</span>
-      </div>
-      <div>
-        <span>文档：</span>
-        <span data-url="https://github.com/nlbwqmz/wj-loading" class="url">github</span>
-      </div>
-    </div>
+    <div class="bg">yarn add wj-loading</div>
+    <div class="bg">npm install wj-loading</div>
+    <div data-url="https://github.com/nlbwqmz/wj-loading" class="url">github</div>
   </div>
   <div class="grid-container">
-    ${Lt()}
+    ${Yt()}
   </div>
-`;ft.forEach(e=>{new mt[e]({element:document.getElementById(`${e}-loading`),background:"rgba(255, 255, 255, .8)",immediate:!0})});const N=document.querySelectorAll(".url");for(let e=0;e<N.length;e++)N[e].addEventListener("click",i=>{var t;window.open((t=i.target)==null?void 0:t.dataset.url)});
+`;St.forEach(s=>{new Ct[s]({element:document.getElementById(`${s}-loading`),background:"rgba(255, 255, 255, .8)",immediate:!0})});const Q=document.querySelectorAll(".url");for(let s=0;s<Q.length;s++)Q[s].addEventListener("click",i=>{var t;window.open((t=i.target)==null?void 0:t.dataset.url)});
